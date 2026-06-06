@@ -1,71 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husky</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            margin: 0px;
-        }
 
-        header {
-            background-color: hsl(199, 83%, 40%);
-            color: rgb(197, 161, 41);
-            border: 5px solid cadetblue;
-            padding: 10px;
-            text-align: center;
-        }
+     body {
+        font-family: 'Segoe UI'
+        background-color #0b0f19;
+        color: #f0e6d2;
+        line-height: 1.6;
+        font-size: 11pt;
+     }
 
-        .text-panel {
-            border: 1px chocolate;
-            margin: 10px;
-            padding-top: 10px;
-            padding-left: 10px;
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .link-button{
-        display:inline-block;
-        border: 1px solid purple;
-        border-radius: 5px;
-        background-color: purple;
-        color:aliceblue;
-        text-decoration:none;
-        padding: 5px;
-        margin: 5px;
-        transition-duration: 0.3s;
 
+
+
+      header {
+        background-color: rgb(18, 25, 38);
+        border-bottom: 2px solid rgb(200, 170, 110) ;
+        padding: 32px;
+        text-align: center;
+        color: rgb(201, 174, 95);
+     }
+header h1 {
+    color: #c8aa6e;
+    font-size: 22pt;
+    margin-bottom: 0.5rem;
+}
+
+
+     .responsive-img {
+    max-width: 100%;
+    width: 300px;
+    height: 150 px;
+    display: block;
+    margin: 1.5rem auto;
+    border: 1px solid #c8aa6e;
+}
+
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 10pt;
+    color: #a09b8c;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background-color: #1a2233;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #32281f;
+}
+nav a {
+    color: #cdbe91;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: #c8aa6e;
+    color: #121926;
+}
+nav a.active {
+    background-color: #c8aa6e;
+    color: #121926;
+    border-bottom: 3px solid #ffffff;
+}
+
+footer {
+    background-color: #121926;
+    border-top: 2px solid #c8aa6e;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #c8aa6e;
+}
+main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    
+}
+text-center {grid-template-columns: 1fr;
+    text-align: center;
+}
+.content-box, .sidebar-box {
+    background-color: #121926;
+    padding: 2rem;
+    border: 1px solid #32281f;
+    border-radius: 4px;
+    color: #c8aa6e;
+}
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border: 1px solid #c8aa6e;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
     }
-    .link-button:hover{
-        background-color: aliceblue;
-        color: purple;
-        transition-duration: 0.3s;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
-
-    
 </head>
-
 <body>
+    <nav>
+        <a href="index.html" class="active">Strona Główna</a>
+         <a href="zoe.html">O postaci Zoe</a>
+        <a href="https://www.leagueoflegends.com/pl-pl/">Oficjalna Strona Gry</a>
+    </nav>
     <header>
-        <h1>i love league</h1>
-        </header>
-        <div class="text-panel">
+        <h1>League of Legends</h1>
+        <p> Witaj podróżniku!</p>
+    </header>
+    <main class="main-container">
+         <section class="content-box">
+            <h2>O grze</h2>
+            <p><strong>League of Legends (LoL)</strong><bold>to swietna</bold> gra taktyczna która opiera sie na współpracy twojej drużyny przeciwko wrogów z pzeciwnego teamu </p>
+            <p>Ta <bold>świetna</bold> gra oferuje ponad 160 unikalnych bohaterów, podzielonych na różne role, takie jak magowie, strzelcy, obrońcy czy zabójcy. Każdy gracz znajdzie postać idealnie pasującą do jego stylu gry.</p>
+              <figure>
+                <img src="grafika/lol-mapa.avif" alt="mapa lola" class="responsive-img"
+                <figcaption>Widok na mapę Summoner's Rift.</figcaption>
+                
+            </figure>
+
+         </section>
+  <section class="sidebar-box">
+            <h3>Szybkie linki </h3>
+            <p>Możesz kliknąć na obrazek, czeka na ciebie tam niespodzianka!:</p>
+             <img src="tyler1-reformed.webp" alt="Grafika nawigacyjna" usemap="#nav-map" class="responsive-img">
+            <map name="nav-map">
+                <area shape="rect" coords="0,0,150,150" alt="Zoe" href="zoe.html">
+                <area shape="rect" coords="151,0,300,150" alt="Oficjalna" href="https://www.leagueoflegends.com/pl-pl/">
+            </map>
+    </section>
     
-    <p style="text-align: center;">gaming</p>
 
-    <a class="link-button"  href="podstrona.html" target="blank"> polecam</a>
-    <br>
-    <button onclick="location.href='https://www.leagueoflegends.com/pl-pl/download/'"> kliknij to</button>
-    </div>
 
-    <img style="text-align: center;" src="tyler1-reformed.webp" alt="image od tyler"
-        style="text-align:center max-width=100%; ">
-    <img src="grafika/tyler1-reformed.webp" alt="image od tyler" style="text-align: center; max-width: 100%;">
-    <img src="https://thetechreviewer.com/wp-content/uploads/2019/05/Tyler1-Head.jpg" alt="image od tyler"
-        style="text-align: center; width: 100%; ">
+    </main>
+
+   <footer>
+    <a>Autor Kamila hass | s36591</a>
+   </footer>
+
 
 </body>
-
-</html>
+</html>>
