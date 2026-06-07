@@ -4,17 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zoe</title>
-    <link rel="stylesheet" href="style">
+    <style>
+body {
+        font-family: 'Segoe UI'
+        background-color #0b0f19;
+        color: #f0e6d2;
+        line-height: 1.6;
+        font-size: 11pt;
+        } 
+header {
+        background-color: rgb(18, 25, 38);
+        border-bottom: 2px solid rgb(200, 170, 110) ;
+        padding: 32px;
+        text-align: center;
+        color: rgb(201, 174, 95);}
+header h1 {
+    color: #c8aa6e;
+    font-size: 22pt;
+    margin-bottom: 0.5rem;
+}
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 10pt;
+    color: #a09b8c;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background-color: #1a2233;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #32281f;
+}
+nav a {
+    color: #cdbe91;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: #c8aa6e;
+    color: #121926;
+}
+nav a.active {
+    background-color: #c8aa6e;
+    color: #121926;
+    border-bottom: 3px solid #ffffff;
+}
+
+footer {
+    background-color: #121926;
+    border-top: 2px solid #c8aa6e;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #c8aa6e;
+}
+main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    
+}
+text-center {grid-template-columns: 1fr;
+    text-align: center;
+}
+.content-box, .sidebar-box {
+    background-color: #121926;
+    padding: 2rem;
+    border: 1px solid #32281f;
+    border-radius: 4px;
+    color: #c8aa6e;
+}
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border: 1px solid #c8aa6e;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes obrot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#gwiazda { transform-origin: center;
+    animation: obrot 10s linear infinite;
+}
+
+
+
+
+
+    </style>
+
+
+
+
 </head>
 <body>
     <header>
         <h1>Zoe</h1>
         <p>Aspekt Zmierzchu</p>
+        <svg width="200" height="200" viewBox="0 0 100 100">
+        <polygon id="gwiazda" fill="yellow" stroke="orange" stroke-width="2" 
+                 points="50,5 61,35 95,35 68,57 79,90 50,70 21,90 32,57 5,35 39,35" />
+    </svg>
+
     </header>
     <nav>
         <a href="index.html">Strona Główna</a>
         <a href="zoe.html" class="active">O postaci Zoe</a>
-        <a href="oficjalna.html">Oficjalna Strona Gry</a>
+        <a href="https://www.leagueoflegends.com/pl-pl/">Oficjalna Strona Gry</a>
     </nav>
 
     <main class="main-container">
@@ -31,7 +152,7 @@
             </ul>
             <figure>
                 <img src="grafika/zoe.jpg" alt="Zoe">
-                <figcaption>Rysunek 2: Zoe, Aspekt Zmierzchu.</figcaption>
+                <figcaption>Zoe, Aspekt Zmierzchu.</figcaption>
             </figure>
 </section>
 
